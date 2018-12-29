@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Octane Mix</string>
+    <string name="app_full_name">Octane Mix Calculator</string>
+    <string name="r_m_2_method">TAP TO EDIT</string>
+    <string name="minimum_octane_rating">MINIMUM OCTANE</string>
+    <string name="maximum_octane_rating">MAXIMUM OCTANE</string>
+    <string name="desired_octane_rating">DESIRED OCTANE</string>
+    <string name="gallons">GALLONS</string>
+    <string name="calculate">CALCULATE</string>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/background"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_med"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".ResultsActivity">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/lowerOctane"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:textStyle="bold"
+                android:textSize="60sp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:background="@drawable/octane_button_background"
+                android:textColor="@android:color/black"
+                android:text="91"/>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:orientation="vertical"
+                      android:gravity="center"
+                      android:layout_marginLeft="@dimen/padding_small"
+                      android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/lowerGallons"
+                    android:layout_width="wrap_content"
+                    android:background="@color/grey"
+                    android:textSize="40sp"
+                    android:padding="@dimen/padding_small"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="6.67"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@android:color/white"
+                      android:layout_marginTop="@dimen/padding_small"
+                      android:textStyle="bold"
+                      android:text="GALLONS"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_marginTop="@dimen/padding_med"
+                 android:layout_marginBottom="@dimen/padding_med"
+                 android:layout_height="40dp">
+
+        <View android:layout_width="match_parent"
+              android:background="@color/green"
+              android:layout_height="match_parent"/>
+
+        <View android:id="@+id/resultBar"
+              android:layout_width="match_parent"
+              android:background="@color/red"
+              android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:orientation="vertical"
+                      android:gravity="center"
+                      android:layout_marginRight="@dimen/padding_small"
+                      android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/higherGallons"
+                    android:layout_width="wrap_content"
+                    android:background="@color/grey"
+                    android:textSize="40sp"
+                    android:padding="@dimen/padding_small"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="6.67"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@android:color/white"
+                      android:layout_marginTop="@dimen/padding_small"
+                      android:textStyle="bold"
+                      android:text="GALLONS"/>
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/higherOctane"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:textStyle="bold"
+                android:textSize="60sp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:background="@drawable/octane_button_background"
+                android:textColor="@android:color/black"
+                android:text="100"/>
+    </LinearLayout>
+
+</LinearLayout>

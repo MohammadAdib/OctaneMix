@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="120dp"
+              android:layout_height="120dp"
+              android:layout_weight="1"
+              android:orientation="vertical"
+              android:background="@drawable/octane_button_background"
+              android:gravity="center"
+              android:padding="@dimen/padding_small">
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:includeFontPadding="false"
+            android:text="@string/minimum_octane_rating"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/black"
+            android:textSize="6sp"
+            android:text="@string/r_m_2_method"/>
+
+    <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="XX"
+            android:inputType="number"
+            android:maxLength="3"
+            android:gravity="center"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:includeFontPadding="false"/>
+
+
+    <View android:id="@+id/light"
+          android:layout_width="40dp"
+          android:layout_height="10dp"
+          android:background="@drawable/green_light"/>
+
+</LinearLayout>
