@@ -5,8 +5,9 @@
     <string name="minimum_octane_rating">MINIMUM OCTANE</string>
     <string name="maximum_octane_rating">MAXIMUM OCTANE</string>
     <string name="desired_octane_rating">DESIRED OCTANE</string>
-    <string name="gallons">GALLONS</string>
     <string name="calculate">CALCULATE</string>
     <string name="ad_unit">ca-app-pub-6027601528593736/5704966095</string>
     <string name="admob_app_id">ca-app-pub-6027601528593736~5130428634</string>
+    <string name="gallons">GALLONS</string>
+    <string name="go_back">GO BACK</string>
 </resources>

@@ -2,20 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
 
     <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_above="@id/publisherAdView"
-            android:background="@color/background"
             android:gravity="center_vertical"
             android:padding="@dimen/padding_med"
+            android:layout_above="@id/back"
             android:orientation="vertical"
             android:layout_height="match_parent"
             tools:context=".ResultsActivity">
 
+        <!-- Lower Octane -->
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
@@ -55,10 +56,11 @@
                           android:textColor="@android:color/white"
                           android:layout_marginTop="@dimen/padding_small"
                           android:textStyle="bold"
-                          android:text="GALLONS"/>
+                          android:text="@string/gallons"/>
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Percentage Bar -->
         <FrameLayout android:layout_width="match_parent"
                      android:layout_marginTop="@dimen/padding_med"
                      android:layout_marginBottom="@dimen/padding_med"
@@ -83,6 +85,7 @@
 
         </FrameLayout>
 
+        <!-- Higher Octane -->
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
@@ -111,7 +114,7 @@
                           android:textColor="@android:color/white"
                           android:layout_marginTop="@dimen/padding_small"
                           android:textStyle="bold"
-                          android:text="GALLONS"/>
+                          android:text="@string/gallons"/>
             </LinearLayout>
 
             <TextView
@@ -129,22 +132,22 @@
 
     </LinearLayout>
 
+    <!-- Go Back -->
     <TextView android:layout_width="match_parent" android:layout_height="54dp"
               android:textColor="@color/colorPrimary"
               android:gravity="center"
               android:id="@+id/back"
-              android:layout_above="@id/publisherAdView"
+              android:layout_alignParentBottom="true"
               android:textSize="16sp"
-              android:text="GO BACK"/>
+              android:text="@string/go_back"/>
 
+    <!-- Ad -->
     <com.google.android.gms.ads.doubleclick.PublisherAdView
             xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/publisherAdView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/ad_unit">
-    </com.google.android.gms.ads.doubleclick.PublisherAdView>
+            ads:adUnitId="@string/ad_unit"/>
 </RelativeLayout>

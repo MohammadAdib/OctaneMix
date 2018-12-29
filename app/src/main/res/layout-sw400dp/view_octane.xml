@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="160dp"
-             android:layout_height="160dp"
-             android:layout_weight="1"
-             android:orientation="vertical"
-             android:background="@drawable/octane_button_background"
-             android:gravity="center"
-             android:padding="@dimen/padding_med">
+              android:layout_width="160dp"
+              android:layout_height="160dp"
+              android:layout_weight="1"
+              android:orientation="vertical"
+              android:background="@drawable/octane_button_background"
+              android:gravity="center"
+              android:padding="@dimen/padding_med">
 
     <TextView
             android:id="@+id/title"
@@ -16,6 +16,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"
             android:textSize="10sp"
+            android:includeFontPadding="false"
             android:text="@string/minimum_octane_rating"/>
 
     <TextView
@@ -23,6 +24,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textStyle="bold"
+            android:includeFontPadding="false"
             android:textColor="@android:color/black"
             android:textSize="8sp"
             android:text="@string/r_m_2_method"/>
