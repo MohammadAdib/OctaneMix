@@ -8,14 +8,29 @@ import kotlinx.android.synthetic.main.activity_results.*
 import android.opengl.ETC1.getHeight
 import android.view.ViewTreeObserver
 import android.view.animation.DecelerateInterpolator
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.doubleclick.PublisherAdRequest
+import com.google.android.gms.ads.doubleclick.PublisherAdView
+
+
 
 
 class ResultsActivity : AppCompatActivity() {
+
+    lateinit var mPublisherAdView : PublisherAdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results)
         setTitle(R.string.app_full_name)
+        back.setOnClickListener { finish() }
+
+        MobileAds.initialize(this, getString(R.string.admob_app_id))
+
+        mPublisherAdView = findViewById(R.id.publisherAdView)
+        val adRequest = PublisherAdRequest.Builder().build()
+        mPublisherAdView.loadAd(adRequest)
     }
 
     override fun onAttachedToWindow() {
@@ -26,7 +41,7 @@ class ResultsActivity : AppCompatActivity() {
         val higherG = intent.getDoubleExtra("higherG", 0.0)
         val gallons = intent.getIntExtra("gallons", 0)
 
-        var font = Typeface.createFromAsset(getAssets(), "fonts/digital.ttf")
+        var font = Typeface.createFromAsset(getAssets(), "fonts/digital-7.ttf")
         lowerGallons.typeface = font
         higherGallons.typeface = font
 
@@ -41,6 +56,7 @@ class ResultsActivity : AppCompatActivity() {
                 var percentLower = lowerG / gallons
                 var translation = resultBar.width * percentLower
                 resultBar.animate().translationX(translation.toFloat()).setInterpolator(DecelerateInterpolator()).setDuration(500)
+                desiredBar.animate().translationX(translation.toFloat()).setInterpolator(DecelerateInterpolator()).setDuration(500)
             }
         })
     }

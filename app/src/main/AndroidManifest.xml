@@ -3,6 +3,9 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="mohammadadib.octane">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -21,6 +24,12 @@
         <activity android:name=".ResultsActivity"
                   android:screenOrientation="portrait">
         </activity>
+        <meta-data
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="ca-app-pub-6027601528593736~5130428634"/>
+        <meta-data
+                android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+                android:value="true"/>
     </application>
 
 </manifest>

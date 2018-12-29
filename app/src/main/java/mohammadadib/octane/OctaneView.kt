@@ -1,14 +1,12 @@
 package mohammadadib.octane
 
 import android.content.Context
-import android.content.Intent
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.*
 
 class OctaneView : FrameLayout {
 
@@ -26,7 +24,7 @@ class OctaneView : FrameLayout {
         LayoutInflater.from(context).inflate(R.layout.view_octane, this, true)
         octane = findViewById(R.id.input)
 
-        if(id == R.id.octaneA) {
+        if (id == R.id.octaneA) {
             setOctane(91)
             setTitle(R.string.minimum_octane_rating)
             setLight(R.drawable.green_light)
@@ -54,6 +52,10 @@ class OctaneView : FrameLayout {
     }
 
     fun getOctane(): Int {
-        return Integer.valueOf(octane!!.text.toString())
+        try {
+            return Integer.valueOf(octane!!.text.toString())
+        } catch (e: Exception) {
+            return 0
+        }
     }
 }
